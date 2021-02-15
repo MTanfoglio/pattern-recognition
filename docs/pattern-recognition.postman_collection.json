@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "800f3d20-942c-4095-813d-cb723ee7dc93",
+		"name": "pattern-recognition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_space",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/PatternRecognition/space",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PatternRecognition",
+						"space"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lines",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/PatternRecognition/lines/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PatternRecognition",
+						"lines",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_space",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "columns",
+							"value": "[\"0003\", \"0008\", \"{ 'type': 'dynamic', 'name': 'OTF_custom', 'label': 'perf_YTD', 'algorithm': 'tot_ret', 'currency': '814', 'ldate': 1514721600000, 'timeunit': '1D','usecalendar_timeunit': 'false', 'timeframe': '0YTD', 'usecalendar_timeframe': 'false', 'specificParams': {} }\", \"000015359056F61F\", \"00001530E54CEAF1\"]",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deusIds",
+							"value": "[\"ACD4004E1A0818A295C0\"]",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/PatternRecognition/space",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PatternRecognition",
+						"space"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_point",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 2,\n    \"y\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PatternRecognition/point",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PatternRecognition",
+						"point"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
